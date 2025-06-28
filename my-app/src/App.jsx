@@ -7,6 +7,7 @@ import guess from "./GuessNumber.js"
 import InputComponent from "./userInput";
 import {Route, Routes, Link} from "react-router-dom"
 import ReactPlayer  from 'react-player'
+import MyForm from "./myForm.jsx"
 function Main(props){
   return (
     <>
@@ -40,10 +41,12 @@ function App() {
   <Link to="/head">Head</Link>
   <Link to="/toggle">Toggle</Link>
   <Link to="/input">Input</Link>
+  <Link to="/form">Form</Link>
   <Routes>
   <Route path="/head" element={<Header title={<h1>King Star Khan</h1>} />}/>
   <Route path="/toggle" element={<ModeToggler/>}/>
   <Route path="/input" element={<InputComponent/>}/>
+  <Route path="/form" element={<MyForm />}/>
   </Routes>
     <button onClick={guess}>Guess Here</button>
 
